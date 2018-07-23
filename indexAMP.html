@@ -1,20 +1,25 @@
-<!-- <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
-<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-<script src="js/index.js"></script> -->
-
 <!doctype html>
 <html amp lang="en">
   <head>
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <title>poet AMPs home</title>
-    <link rel="canonical" href="http://example.ampproject.org/article-metadata.html">
+    <link rel="canonical" href="https://github.com/gguwhuWU/myWebSite/indexFull.html">
+    <!-- <link rel=”canonical” href="https://www.example.com/url/to/amp/document.html"> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+        /* inline style 有 50 Kb 限制，記得要做 Minify*/
+        /* any custom style goes here */
+        body {
+          background-color: white;
+        }
+        amp-img {
+          background-color: gray;
+          border: 1px solid black;
+        }
+      </style>
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -24,7 +29,7 @@
         "author": "huanyWu",
         "publisher": "huanyWu",
         "image": [
-          "img/Koala_resized.jpg"
+          "https://gguwhuwu.github.io/myWebSite/img/Koala_resized.jpg"
         ]
       }
     </script>
@@ -34,7 +39,7 @@
     <h1>Welcome to the mobile web</h1>
     <div class="container">
         test home
-        <amp-img src="img/Desert_resized.jpg" alt="Welcome" height="400" width="800"></amp-img>
+        <amp-img src="img/Desert_resized.jpg" alt="Welcome" layout="responsive" height="240" width="180"></amp-img>
     </div>  
   </body>
 </html>
