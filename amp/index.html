@@ -1,0 +1,105 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>poet AMPs home</title>
+    <link rel="canonical" href="../full/index.html">
+    <!-- <link rel=”canonical” href="https://www.example.com/url/to/amp/document.html"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+        /* inline style 有 50 Kb 限制，記得要做 Minify*/
+        /* any custom style goes here */
+        body {
+          background-color: white;
+        }
+        amp-img {
+          background-color: gray;
+          border: 1px solid black;
+        }
+      </style>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Open-source framework for publishing content",
+        "datePublished": "2018-07-23T12:02:41Z",
+        "author": "huanyWu",
+        "image": [
+          "https://gguwhuwu.github.io/myWebSite/img/Koala_resized.jpg"
+        ]
+      }
+    </script>
+    <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
+    <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+  </head>
+  <body>
+      <amp-state id="myTestName">
+          <script type="application/json">
+            {
+              "country1": "name",
+              "dog": {
+                "name": "dd",
+                "style": "greenBackground"
+              },
+              "cat": {
+                "name": "ccccc",
+                "style": "redBackground"
+              }
+            }
+          </script>
+        </amp-state>
+
+    <h1>Welcome to the mobile web</h1>
+    <div class="container">
+        test home
+        <amp-list width="auto"
+          height="100"
+          layout="fixed-height"
+          src="../json/amp-list-urls.json">
+          <template type="amp-mustache">
+            <div class="url-entry">
+              <a href="{{url}}">{{title}}</a>
+            </div>
+          </template>
+        </amp-list>
+        ...........
+        
+        ............
+        <button on="tap:mySelector.clear">Clear Selection</button>
+        <amp-selector id="mySelector" layout="container"
+        multiple>
+          <div option="1">Option One</div>
+          <div option="2">Option Two</div>
+          <div option="3">Option Three</div>
+        </amp-selector>
+        .............
+        </br>
+        <span>name:<input type="text" name="name" on="change:AMP.setState({countryName: event.value})"></span>
+        <p [text]="'hello ' + myTestName.country1">hello world</p>
+        <button on="tap:AMP.setState({myTestName: { country1 : 'tw'}})">go!</button>
+        <amp-list width="auto"
+          height="100"
+          layout="fixed-height"
+          single-item
+          items ="."
+          src="https://restcountries.eu/rest/v2/all"
+          [src]=" 'https://restcountries.eu/rest/v2/name/' + countryName ">
+          <div placeholder>Loading ...</div>
+          <div fallback>Failed to load data.</div>
+          <template type="amp-mustache">
+            <div class="url-entry">
+              <p>{{name}}</p>
+              <!-- <p>{{^name}} no items founds. {{/name}}</p> -->
+            </div>
+          </template>
+        </amp-list>
+    </div>  
+  </body>
+</html>
