@@ -20,30 +20,26 @@ body {
 h1 {
     color: #333;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
-button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
+p {
+    font-size: 18px;
+    line-height: 1.5;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    margin-bottom: 1rem;
 }
 
-button:hover {
-    background-color: #45a049;
-}
-
-#confession {
+.confession {
+    background-color: #e6f3ff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,255,255,0.2);
     margin-top: 2rem;
 }
 
-#message {
-    white-space: pre-wrap; /* 允許換行 */
+h2 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 1rem;
 }
